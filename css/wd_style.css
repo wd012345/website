@@ -1,26 +1,66 @@
-/* variables
-@w_1 = 640px;
-@w_2 = 1280px;*/
+/* Gilmer fonts */
+@font-face {
+  font-family: Gilmer;
+  src: url(Gilmer-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: Gilmer;
+  src: url(Gilmer-Bold.otf);
+  font-weight: bold;
+}
 
- /* Create two or three equal columns that float next to each other */
-/*.row {
-  padding: 4px;
-}*/
+/* set common styles */
+* {
+  font-family: Gilmer, Sans-serif;
+  border-style: none;
+  margin: 0px;
+}
+img {
+  border-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  font-size: 18px;
+  padding-bottom: 16px;
+}
+p {
+  font-size: 18px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+/* Create two or three equal columns that float next to each other */
 .col2 {
   float: left;
+  /*padding-bottom: 16px;*/
   width: 50%;
+}
+.col2a {
+  float: left;
+  text-align: center;
+  width: 35%;
+}
+.col2b {
+  float: left;
+  width: 65%;
 }
 .col3 {
   float: left;
+  padding-bottom: 24px;
   width: 33.33%;
 }
 
-
 /* Clear floats after the columns */
+/*.row {
+  padding-bottom: 16px;
+  padding-top: 24px;
+}*/
 .row:after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
 }
 
 /* Responsive layout:
@@ -28,119 +68,93 @@
    instead of next to each other on smaller screens
    (640px wide or less) */
 @media screen and (max-width: 640px) {
-  .col2 {
-    width: 100%;
+  .col2, .col2a, .col2b {
+    /*padding-bottom: 16px;*/
+   width: 100%;
   }
   .col3 {
+    /*padding-bottom: 16px;*/
     width: 100%;  
   }
 }
 
-/* set body font to Gilmer */
-body {
-  font-family: Gilmer;
+/* style header and top navigation container of website */
+header.website {
+  border-width: 0px;
+  color: #320064;
+  margin: 0px;
+  padding-bottom: 48px;
+  padding-top: 48px;
+  text-align: center;
+}
+
+/* style welcome page with polar light background */
+.welcome {
+  background-image: url('img/wd_polarlight.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-width: 0px;
+  color: #ffffff;
+  padding-bottom: 16px;
+  padding-right: 16px;
+  padding-top: 256px;
+  text-align: right;
+}
+button {
+  background-color: #ffffff;
+  border-style: outset;
+  color: #320064;
+  font-size: 20px;
+  padding: 4px;
 }
 
 /* style header and top navigation container of menu */
 .menu {
   background-color: #320064;
   border-width: 0px;
-  color: #f7f7f7;
-  margin: auto;
-  padding-bottom: 24px;
-  padding-top: 24px;
+  color: #ffffff;
+  line-height: 48px;
+  padding: 32px;
   text-align: center;
-  max-width: 1280px;
+  /*max-width: 1280px;*/
 }
 nav.menu {
   font-size: 24px;
+  padding-bottom: 192px;
+  padding-top: 64px;
 }
 
-/* style header and top navigation container of website */
-header.website, nav.website {
-  background-color: #f7f7f7;
-  border-width: 0px;
-  color: #320064;
-  margin: auto;
-  padding-bottom: 24px;
-  padding-top: 24px;
-  text-align: center;
-  max-width: 1280px;
-}
-
-/* style welcome page with polar light background */
-section.welcome {
-  /*background-image: url('wd_polarlight.jpg');
-  background-position: left top 0 0;*/
-  color: #f7f7f7;
-  margin: auto;
-  max-width: 1280px;
-}
 .picto {
   background-color: #320064;
-  border-width: 0px;
-  color: #f7f7f7;
-  height: auto;
-  margin: auto;
-  max-width: 1280px;
-  padding-bottom: 24px;
-  padding-top: 24px;
-  text-align: center;
-}
-.polarlight {
-  background-color: #f7f7f7;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: auto;
-  opacity: 90%;
-  padding: 16px;
-  /*position: relative;*/
-}
-.welcometext {
-  color: #f7f7f7;
-  /*font-size: 32px;
-  left: 54%;
-  position: absolute; */
-  padding-top: 64px;
-  text-align: right;
-  /*top: 48%;
-  transform: translate(-50%, -50%);*/
-}
-button {
-  background-color: #f7f7f7;
-  color: #320064;
+  /*border-style: none;*/
+  color: #ffffff;
+  font-size: 32px;
+  margin: 0px;
+  padding: 128px 0px 0px 0px;
 }
 
 /* style main content */
 .main {
-  background-color: #f7f7f7;
-  /*border-width: 0px;*/
   color: #320064;
-  height: auto;
   margin: auto;
-  padding: 8px;
-  text-align: center;
   max-width: 1280px;
+  padding: 24px;
+  text-align: left;
 }
 .maintext {
   text-align: left;
 }
 .chapter {
-  background-color: #f7f7f7;
-  border-width: 0px;
   color: #320064;
-  height: auto;
   margin: auto;
-  padding-bottom: 24px;
-  padding-top: 24px;
-  text-align: center;
   max-width: 1280px;
+  padding: 64px 32px 32px 32px;
+  text-align: left;
 }
 .chaptertext {
   border-width: 0px;
-  margin: 2px;
-  padding: 0px;
+  padding-right: 16px;
   text-align: left;
 }
 
@@ -152,6 +166,7 @@ button {
     border-width: 2px;
     display: inline-table;
     height: 256px;
+    margin: 16px;
     text-align: center;
     width: 256px;
 }
@@ -164,198 +179,14 @@ button {
 /* style the footer */
 footer {
   background-color: #320064;
-  color: #f7f7f7;
-  height: auto;
-  margin: auto;
-  max-width: 1280px;
+  /*border-bottom-style: none;*/
+  color: #ffffff;
+  padding-bottom: 192px;
+  padding-top: 48px;
 }
-.footertext {
-  padding: 8px;
+div.footertext {
   text-align: center;
 }
 
 
-
-
-
-/*.header {
-    background-image: url('fem30pc.png');
-    background-position: center top;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    margin: 0px;
-    padding: 0px;
-}
-.nav {
-    background-color: #efefef;
-    overflow: hidden;
-}
-.nav a {
-    display: block;
-    float: left;
-    font-size: 18px;
-    padding: 14px 16px;
-    text-align: center;
-    text-decoration: none;
-}
-.nav a:hover {
-    background-color: #320064;
-    color: #efefef;
-}
-.projects {
-    font-size: 16px;
-}
-.projects div {
-    background-color: #efffdf;
-    border-color: #ffffff;
-    border-style: solid;
-    border-width: 4px;
-    display: inline-table;
-    height: 128px;
-    margin: 2px;
-    padding: 8px;
-    text-align: left;
-    /*width: 288px;*/
-/*}/*
-.projects div:hover {
-    border-color: #efefef;
-    border-style: solid;
-    border-width: 4px;
-}
-.logo {
-    height: 64px;
-    width: 64px;
-}
-.footer {
-    background-color: #dfdfdf;
-    font-size: 18px;
-    padding: 16px;
-    text-align: center;
-}
-div.aboutme1 {
-    display: block;
-    font-size: 16px;
-    margin: 8px;
-    padding: 8px;
-    text-align: right;
-}
-div.aboutme2 {
-    display: block;
-    font-size: 16px;
-    margin: 8px;
-    padding: 8px;
-    text-align: left;
-}
-div.location {
-    display: block;
-    font-size: 16px;
-    margin: 8px;
-    padding: 32px;
-    text-align: right;
-}
-
-/*
-.flex-container {
-    display: flex;
-}
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: #2f1d70;
-    color: white;
-    padding: 16px 32px 16px 32px;
-}
-li.dropdown {
-    display: inline-block;
-}
-.dropdown-content {
-    background-color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    display: none;
-    font-size: 20px;
-    min-width: 160px;
-    padding: 8px;
-    position: absolute;
-    z-index: 1;
-}
-.dropdown-content a {
-    color: #2f1d70;
-    display: block;
-    padding: 12px 16px;
-    text-align: left;
-    text-decoration: none;
-}
-.dropdown-content a:hover {
-    background-color: #2f1d70;
-    color: white;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}*/
-/*
-div.main {
-    background-image: url('fem30pc.png');
-    background-position: center top;
-    background-repeat: no-repeat;
-    display: block;
-    font-size: 18px;
-    padding-top: 18px;
-    padding-bottom: 32px;
-    text-align: center;
-}
-.flex-container > div.projects {
-    background-color: #f9f9f9;
-    font-size: 16px;
-    margin: 8px;
-    padding: 12px;
-    text-align: left;
-}
-span.cs {
-    display: inline-block;
-    border: 1px solid #2f1d70;
-    width: 30%;
-    height: 128px;
-    padding: 8px;
-}
-span.ds {
-    display: inline-block;
-    border: 1px solid #2f1d70;
-    width: 30%;
-    height: 128px;
-    padding: 8px;
-}
-span.el {
-    display: inline-block;
-    border: 1px solid #2f1d70;
-    width: 30%;
-    height: 128px;
-    padding: 8px;
-} */
-/*
-img.location {
-    height: 385px;
-    /*height: 321px;*/
-/*    max-height: 642px;
-    max-width: 728px;
-    width: 436px;  
-    /*width: 364px;*/
-
-
-
-/*
-main {
-	background: #c4ced3;
-	border: 1px solid;
-	border-color: #8a9da8;
-	border-radius: 8px 8px 8px 8px;
-	display: block;	*/ /* für IE */ /*
-	margin: 10px;
-	padding: 10px;
-	}
-
-section {
-	background: #F1F3F4;
-	border: 1px solid;
-	border-color: slateblue;
-	border-radius: 8px 8px 8px 8px;
-	margin: 10px;
-	padding: 2px;
-	}*/
+/* end of wd_style.css */
