@@ -23,6 +23,7 @@ img {
 }
 li {
   font-size: 18px;
+  list-style-type: none;
   padding-bottom: 16px;
 }
 p {
@@ -48,7 +49,6 @@ p {
 }
 .col3 {
   float: left;
-  padding-bottom: 24px;
   width: 33.33%;
 }
 
@@ -101,13 +101,13 @@ header.website {
   padding-top: 256px;
   text-align: right;
 }
-button {
+/*button {
   background-color: #ffffff;
   border-style: outset;
   color: #320064;
   font-size: 20px;
   padding: 4px;
-}
+}*/
 
 /* style header and top navigation container of menu */
 .menu {
@@ -140,7 +140,7 @@ nav.menu {
   margin: auto;
   max-width: 1280px;
   padding: 24px;
-  text-align: left;
+  text-align: center;
 }
 .maintext {
   text-align: left;
@@ -150,7 +150,7 @@ nav.menu {
   margin: auto;
   max-width: 1280px;
   padding: 64px 32px 32px 32px;
-  text-align: left;
+  text-align: center;
 }
 .chaptertext {
   border-width: 0px;
@@ -163,9 +163,10 @@ nav.menu {
     background-color: #efffdf;
     border-color: #f7f7f7;
     border-style: solid;
-    border-width: 2px;
+    border-width: 4px;
+    color: #320064;
     display: inline-table;
-    height: 256px;
+    height: 320px;
     margin: 16px;
     text-align: center;
     width: 256px;
@@ -173,7 +174,7 @@ nav.menu {
 .tile:hover {
     border-color: #320064;
     border-style: solid;
-    border-width: 2px;
+    border-width: 4px;
 }
 
 /* style the footer */
@@ -181,7 +182,7 @@ footer {
   background-color: #320064;
   /*border-bottom-style: none;*/
   color: #ffffff;
-  padding-bottom: 192px;
+  padding-bottom: 256px;
   padding-top: 48px;
 }
 div.footertext {
